@@ -1,0 +1,165 @@
+/* ---------------------------------
+6. PORFOLIO SECTION
+--------------------------------- */
+
+p {
+    font-size: 15px
+}
+
+.container-details {
+    margin-top: 90px;
+}
+
+@media only screen and (max-width: 767px) {
+    .container-details {
+        margin-top: 0px;
+    }
+}
+
+.tn {
+    padding: 0;
+    margin: 15px 7.5px 0px;
+    width: 270px;
+}
+
+li {
+    display: inline-block;
+}
+
+.portfolio-section {
+    position: relative;
+}
+
+.portfolio-section .portfolioFilter {
+    margin-top: 60px;
+    color: #666;
+}
+
+.portfolio-section .portfolioFilter button {
+    margin: 10px 10px 0 0;
+}
+
+.portfolio-section .portfolioFilter button.current {
+    color: #FFA804;
+}
+
+
+/*
+  Color del Loading
+*/
+
+svg path,
+svg rect {
+    fill: black;
+}
+
+.section {
+    padding: 100px 0 50px;
+}
+
+.section .heading {
+    margin-bottom: 60px;
+}
+
+.section .heading:before {
+    content: '';
+    height: 10px;
+    width: 150px;
+    border-radius: 5px;
+    margin-bottom: 20px;
+    display: block;
+    background: #FFA804;
+}
+
+
+/* ACCORDIANS */
+
+.panel-area .panel-title {
+    padding: 10px 20px;
+    cursor: pointer;
+    position: relative;
+    color: #fff;
+    border-radius: 3px;
+    background: #FFAD01;
+    color: #fff;
+}
+
+.panel-area .panel-desc {
+    max-height: 0;
+    overflow: hidden;
+    opacity: 0;
+    -webkit-transition: all .05s, opacity .25s .1s, -webkit-transform .1s;
+    transition: all .05s, opacity .25s .1s, transform .1s;
+    -webkit-transform: scaleY(0);
+    transform: scaleY(0);
+    -webkit-transform-origin: top;
+    transform-origin: top;
+}
+
+.panel-area .panel-title .icon {
+    float: right;
+    font-size: .7em;
+    margin-top: 5px;
+}
+
+.panel-area .panel-title.active {
+    background: #28023D;
+}
+
+.panel-area .panel-title.active+.panel-desc {
+    opacity: 1;
+    padding: 20px 20px 0;
+    max-height: 300px;
+    -webkit-transform: scaleY(1);
+    transform: scaleY(1);
+}
+
+.panel-area .panel-title .icon.plus,
+.panel-area .panel-title.active .icon.minus {
+    display: block;
+}
+
+.panel-area .panel-title .icon.minus,
+.panel-area .panel-title.active .icon.plus {
+    display: none;
+}
+
+h5 {
+    margin-bottom: 10px;
+}
+
+.social-icons>li>a {
+    height: 50px;
+    line-height: 50px;
+    width: 50px;
+    border-radius: 30px;
+    overflow: hidden;
+    z-index: 1;
+    position: relative;
+    margin: 0 5px 5px;
+    background: #887392;
+    color: #fff;
+    text-align: center;
+    padding-top: 7px;
+}
+
+.social-icons>li>a:after {
+    content: '';
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    top: 0;
+    z-index: -1;
+    border-radius: 30px;
+    background: #FFA804;
+    -webkit-transition: all .2s ease;
+    transition: all .2s ease;
+    -webkit-transform: scale(0);
+    transform: scale(0);
+}
+
+.social-icons>li>a:hover:after {
+    -webkit-transform: scale(1);
+    transform: scale(1);
+}

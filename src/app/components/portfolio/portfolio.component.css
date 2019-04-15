@@ -1,0 +1,78 @@
+/* ---------------------------------
+6. PORFOLIO SECTION
+--------------------------------- */
+
+
+/* .portfolio-section {
+    position: relative;
+}
+
+.portfolio-section .portfolioFilter {
+    margin-top: 60px;
+    color: #666;
+}
+
+.portfolio-section .portfolioFilter a {
+    margin: 10px 10px 0 0;
+}
+
+.portfolio-section .portfolioFilter a.current {
+    color: #FFA804;
+}
+
+.portfolio-section .portfolioContainer {
+    margin-left: -15px;
+    margin-right: -15px;
+}
+
+.portfolio-section .p-item {
+    width: 25%;
+    padding: 0 7.5px 0px;
+    margin-top: 15px;
+}
+
+.portfolio-section .p-item a {
+    display: inline-block;
+    position: relative;
+} */
+
+.tn {
+    padding: 0;
+    margin: 15px 7.5px 0px;
+    width: 270px;
+}
+
+li {
+    display: inline-block;
+}
+
+.portfolio-section {
+    position: relative;
+}
+
+.portfolio-section .portfolioFilter {
+    margin-top: 60px;
+    color: #666;
+}
+
+.portfolio-section .portfolioFilter button {
+    margin: 10px 10px 0 0;
+}
+
+.portfolio-section .portfolioFilter button.current {
+    color: #FFA804;
+}
+
+
+/*
+  Color del Loading
+*/
+
+svg path,
+svg rect {
+    fill: black;
+}
+
+.puntero {
+    cursor: pointer;
+}

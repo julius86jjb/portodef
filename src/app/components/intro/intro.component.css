@@ -1,0 +1,26 @@
+.btn-bg-yellow {
+    margin-top: 10px;
+    border: 1px solid #FFAD01;
+    background: #FFAD01;
+    color: #fff;
+}
+
+.btn-bg-yellow:hover {
+    background: none;
+    color: #111;
+}
+
+.menu-intro {
+    background-color: #ffad01;
+    color: #fff;
+    border: 2px solid #fff;
+    border-radius: 25px;
+}
+
+.menu-intro a:hover {
+    color: #fff;
+}
+
+.activemenu {
+    color: #fff !important;
+}

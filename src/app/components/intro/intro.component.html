@@ -1,0 +1,45 @@
+<section class="intro-section">
+    <div class="container">
+        <div class="row">
+            <div class="col-md-1 col-lg-2"></div>
+            <div class="col-md-10 col-lg-8">
+                <div class="intro   animated fadeIn">
+                    <div class="profile-img"><img src="assets/images/profile-1-250x250.jpg" alt=""></div>
+                    <h2><b>Julio Jiménez Palmés</b></h2>
+                    <h4 class="font-yellow">Full Stack Develloper</h4>
+                    <!-- <ul class="nav justify-content-center mt-3 ml-5 mr-5 menu-intro portfolioFilter clearfix hidden-sm-down">
+                        <li class="nav-item">
+                            <a class="nav-link  hvr-shrink active" routerLink="portofolio" routerLinkActive="active" fragment="portofolio"><i class="fas fa-images "></i> PORTOFOLIO</a>
+                        </li>
+                        <li class="nav-item ">
+                            <a class="nav-link hvr-shrink " routerLink="education" routerLinkActive="active" fragment="education"><i class="fas fa-university "></i> EDUCATION</a>
+                        </li>
+                        <li class="nav-item ">
+                            <a class="nav-link hvr-shrink " routerLink="skills" routerLinkActive="active" fragment="skills"><i class=" fas fa-tools "></i> TECHNICAL SKILLS</a>
+                        </li>
+
+                    </ul> -->
+                    <a class="btn btn-bg-yellow" href="#">Download CV</a>
+                    <ul class="information margin-tb-20 ">
+                        <li><b>BORN : </b>{{ _info.info.born }}</li>
+                        <li><b>EMAIL : </b>{{ _info.info.email }}</li>
+                        <li><b>MARITAL STATUS : </b>{{ _info.info.estado_civil }}</li>
+                    </ul>
+                    <ul class="social-icons ">
+                        <li><a href="# "><i class="ion-social-pinterest "></i></a></li>
+                        <li><a href="# "><i class="ion-social-linkedin "></i></a></li>
+                        <li><a [href]='_info.info.instagram'><i class="ion-social-instagram "></i></a></li>
+                        <li><a href="# "><i class="ion-social-facebook "></i></a></li>
+                        <li><a href="# "><i class="ion-social-twitter "></i></a></li>
+                    </ul>
+
+                </div>
+                <!-- intro -->
+            </div>
+            <!-- col-sm-8 -->
+        </div>
+        <!-- row -->
+    </div>
+    <!-- container -->
+</section>
+<!-- intro-section -->

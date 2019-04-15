@@ -1,0 +1,153 @@
+<!-- <section class="portfolio-section section" id="portofolio">
+    <div class="container">
+        <div class="row">
+            <div class="col-sm-12 col-md-3">
+                <div class="heading">
+                    <h3><b>Portfolio</b></h3>
+                    <h6 class="font-lite-black"><b>MY WORK</b></h6>
+                </div>
+            </div>
+
+
+            <div class="col-sm-12 col-md-9">
+                <div class="portfolioFilter clearfix margin-b-80">
+                    <a href="#" data-filter="*" class="current"><b>ALL</b></a>
+                    <a href="#" data-filter=".wamp"><b>WAMP</b></a>
+                    <a href="#" data-filter=".mean"><b>MEAN STACK</b></a>
+                    <a href="#" data-filter=".graphic-design"><b>GRAPHIC DESIGN</b></a>
+                </div>
+            </div>
+
+        </div>
+
+
+        <div class="">
+
+            <div *ngFor="let proy of proyectos" class="p-item graphic-design">
+                <a [href]="proy.galeria" data-fluidbox>
+                    <img [src]="proy.galeria" alt=""></a>
+            </div>
+
+            <div *ngFor="let proy of proyectos" class="p-item graphic-design">
+                <a [href]="proy.galeria" data-fluidbox>
+                    <img [src]="proy.galeria" alt=""></a>
+            </div>
+        </div>
+
+    </div>
+
+</section> -->
+
+<section class="portfolio-section section">
+    <div class="container">
+        <div class="row">
+            <div class="col-sm-12 col-md-3">
+                <div class="heading">
+                    <h3><b>Portfolio</b></h3>
+                    <h6 class="font-lite-black"><b>MY WORK</b></h6>
+                </div>
+            </div>
+
+
+
+            <div class="col-sm-12 col-md-9">
+                <div class="portfolioFilter clearfix margin-b-80">
+                    <button [class.current]="filterBy=='all'" (click)="filterBy='all'"><b>ALL</b></button>
+                    <button [class.current]="filterBy=='wamp'" (click)="filterBy='wamp'"><b>WAMP</b></button>
+                    <button [class.current]="filterBy=='mean'" (click)="filterBy='mean'"><b>MEAN STACK</b></button>
+                    <button [class.current]="filterBy=='angular'" (click)="filterBy='angular'"><b>ANGULAR</b></button>
+                </div>
+
+            </div>
+
+        </div>
+        <div class="loader loader--style1 text-center" title="0" *ngIf="loading">
+            <svg version="1.1" id="loader-1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px" width="40px" height="40px" viewBox="0 0 40 40" enable-background="new 0 0 40 40" xml:space="preserve">
+                <path opacity="0.2" fill="#000" d="M20.201,5.169c-8.254,0-14.946,6.692-14.946,14.946c0,8.255,6.692,14.946,14.946,14.946
+                  s14.946-6.691,14.946-14.946C35.146,11.861,28.455,5.169,20.201,5.169z M20.201,31.749c-6.425,0-11.634-5.208-11.634-11.634
+                  c0-6.425,5.209-11.634,11.634-11.634c6.425,0,11.633,5.209,11.633,11.634C31.834,26.541,26.626,31.749,20.201,31.749z"/>
+                <path fill="#000" d="M26.013,10.047l1.654-2.866c-2.198-1.272-4.743-2.012-7.466-2.012h0v3.312h0
+                  C22.32,8.481,24.301,9.057,26.013,10.047z">
+                  <animateTransform attributeType="xml"
+                    attributeName="transform"
+                    type="rotate"
+                    from="0 20 20"
+                    to="360 20 20"
+                    dur="0.5s"
+                    repeatCount="indefinite"/>
+                  </path>
+                </svg>
+        </div>
+
+        <div class="row" *ngIf="!loading">
+            <ul id="thumbailsList">
+                <li *ngFor="let proy of (proyectos | filterPortofolio:filterBy | keys ); let i = index " class="animated fadeIn">
+
+                    <a [routerLink]="['/item', proy]" target="_blank"><img src="{{proyectos[proy].galeria}}" class="tn puntero" alt="" height="270"></a>
+
+                </li>
+            </ul>
+        </div>
+
+
+        <!-- <div *ngIf="!loading" class="portfolioContainer   margin-b-50">
+
+            <div *ngFor="let proy of proyectos" class="p-item graphic-design">
+                <a [href]="proy.galeria" data-fluidbox>
+                    <img [src]="proy.galeria" alt=""></a>
+            </div>
+
+            <div class="p-item web-design">
+                <a href="assets/images/portfolio-13-400x400.jpg" data-fluidbox>
+                    <img src="assets/images/portfolio-13-400x400.jpg" alt=""></a>
+            </div>
+
+
+            <div class="p-item branding graphic-design">
+                <a href="assets/images/portfolio-14-400x400.jpg" data-fluidbox>
+                    <img src="assets/images/portfolio-14-400x400.jpg" alt=""></a>
+            </div>
+
+
+            <div class="p-item web-design">
+                <a href="assets/images/portfolio-15-400x400.jpg" data-fluidbox>
+                    <img src="assets/images/portfolio-15-400x400.jpg" alt=""></a>
+            </div>
+
+
+            <div class="p-item graphic-design">
+                <a class="img" href="assets/images/portfolio-16-400x400.jpg" data-fluidbox>
+                    <img src="assets/images/portfolio-16-400x400.jpg" alt=""></a>
+            </div>
+
+
+            <div class="p-item branding graphic-design">
+                <a href="assets/images/portfolio-17-400x400.jpg" data-fluidbox>
+                    <img src="assets/images/portfolio-17-400x400.jpg" alt=""></a>
+            </div>
+
+
+            <div class="p-item graphic-design web-design">
+                <a href="assets/images/portfolio-18-400x400.jpg" data-fluidbox>
+                    <img src="assets/images/portfolio-18-400x400.jpg" alt=""></a>
+            </div>
+
+
+            <div class="p-item  graphic-design branding">
+                <a href="assets/images/portfolio-19-400x400.jpg" data-fluidbox>
+                    <img src="assets/images/portfolio-19-400x400.jpg" alt=""></a>
+            </div>
+
+
+            <div class="p-item web-design branding">
+                <a href="assets/images/portfolio-20-400x400.jpg" data-fluidbox>
+                    <img src="assets/images/portfolio-20-400x400.jpg" alt=""></a>
+            </div>
+
+
+        </div> -->
+
+    </div>
+
+</section>
+<!-- portfolio-section -->
